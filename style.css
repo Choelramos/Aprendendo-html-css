@@ -1,0 +1,200 @@
+header {
+	background: #BBBBBB;
+	padding: 20px 0; /*define que nosso header vai ter*/
+	margin: 20px 0 20px 0					/*uma margem de 20px no topo e em baixo*/
+}
+
+.caixa {
+	position: relative;
+	width:  940px; /*normalmente é usado esse padrão para definir o tamanho da area onde fica o conteúdo*/
+	margin: 0 auto; /*isso vai fazer com que a margem da direita e esquerda seja automaticamente calculada*/
+}
+
+nav {
+	position:  absolute;
+	top:  110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase; /*deixa tudo em maiusculo*/
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none; /* essa é a decoração do nosso texto, que está em nada*/
+
+
+}
+/* hover vai definir oque será feito quando o mouse estiver em cima do elemento escolhido*/
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px; /*Largura fixa*/
+	margin: 0 auto;
+	padding: 50px 0; /*nosso espaçamento interno*/
+
+}
+
+.produtos li {
+	display: inline-block; /*Faz com que o bloco do item seja limitado ao seu tamanho*/
+	text-align: center;										/*Na nossa lista isso vai fazer com que cada objeto seja ordenado um ao lado do outro*/
+	width: 30%;
+	vertical-align: top; /*vai alinhar os elementos pela linha de cima*/
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box; /* isso faz com nossa largura (width) seja sempre os 30% que definimos, e que nosso espaço interno (padding) seja definido dentro da largura*/
+	border: 2px solid #000000;
+	border-radius: 10px; /*faz nossa borda ter canto arredondado, são quatro parâmetros em 10px, se quisermos podemos alterar cada um deles*/
+
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;
+}
+
+/* no h2, quando o mouse estiver em cima do li produtos, fazer essas ações: */
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2{
+	font-size: 30px;
+	font-weight: bold; /*peso da fonte em negrito*/
+}
+
+.produto-descricao {
+	font-size: 18px;
+
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg"); /*Imagem de fundo que é repetida várias vezes*/
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin-top: 15px;
+
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+
+form {
+	margin: 40px 0; /*margem superior de 40px e inferior 40px*/
+}
+
+form label, form legend {
+	display: block; /*display tipo block vai ocupar toda a linha do conteúdo*/
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block; /*display block para ocupar toda uma linha*/
+	margin: 0 0 20px; /*margem para baixo do input */
+	padding: 10px 25px; /*espaçamento interno do input*/
+	width: 50%; /* input ocupando 50% da oágina*/
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px ;
+	border: none;
+	border-radius: 5px;
+	/*Faz uma transição da cor do background que demora 1s*/
+	transition: 1s all;
+	/*quando o mouse estiver por cima o cursor vai ser a mão*/
+	cursor: pointer;
+
+}
+
+/*quando o mouse estiver por cima*/
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+
+
+}
+
+table {
+	margin: 20px 0 40px;
+
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px ;
+}
+
+/* css da página inicial */
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em; /*em serve para mudar a proporção do texto, no caso aqui 2em vai deixar meu titulo o dobro do tamanho proporcional*/
+	margin: 0 0 1em;
+	clear:  left; /* limpa o float a esquerda*/
+}
+
+.principal p {
+	margin: 0 0 1em;
+
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px; /*largura*/ 
+	float:  left; /*float faz o elemento flutuar, o parametro é o lado que queremos que ele flutue*/
+	margin: 0 20px 20px 0; /*cima/direita/baixo/esquerda*/
+}
+
+.imagembeneficios {
+	width: 60%;
+}
