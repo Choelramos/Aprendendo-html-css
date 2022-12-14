@@ -4,7 +4,7 @@ body {
 header {
 	background: #BBBBBB;
 	padding: 20px 0; /*define que nosso header vai ter*/
-	margin: 20px 0 20px 0					/*uma margem de 20px no topo e em baixo*/
+	margin: 20px 0 20px 0/*uma margem de 20px no topo e em baixo*/
 }
 
 .caixa {
@@ -48,7 +48,7 @@ nav a:hover {
 
 .produtos li {
 	display: inline-block; /*Faz com que o bloco do item seja limitado ao seu tamanho*/
-	text-align: center;										/*Na nossa lista isso vai fazer com que cada objeto seja ordenado um ao lado do outro*/
+	text-align: center;	/*Na nossa lista isso vai fazer com que cada objeto seja ordenado um ao lado do outro*/
 	width: 30%;
 	vertical-align: top; /*vai alinhar os elementos pela linha de cima*/
 	margin: 0 1.5%;
@@ -98,10 +98,6 @@ footer {
 	color: #FFFFFF;
 	font-size: 13px;
 	margin-top: 15px;
-
-}
-
-main {
 
 }
 
@@ -183,6 +179,18 @@ tr:nth-child(even) { background-color: #dddddd;
 	clear:  left; /* limpa o float a esquerda*/
 }
 
+/*a propriedade firstt-letter pega a primeira letra do titulo
+.titulo-principal:first-letter {
+	font-weight: bold;
+}*/
+/*Usamos before e after para declarar algum texto antes e depois dele finalizar
+.titulo-principal:before {
+	content: "<";
+}
+.titulo-principal:after {
+	content: ">";
+}*/
+
 .principal {
 	padding: 3em 0;
 	background: #FEFEFE;
@@ -192,7 +200,6 @@ tr:nth-child(even) { background-color: #dddddd;
 
 .principal p {
 	margin: 0 0 1em;
-
 }
 
 .principal strong{
@@ -247,12 +254,43 @@ tr:nth-child(even) { background-color: #dddddd;
 .itens:nth-child(1) { /*pseudoelemento para selecionar elementos dentro dessa lista*/
 	font-weight: bold; /*peso da fonte*/
 }
+/* o itens content não é selecionável na página*/
+.itens:before {
+	content: "💈";
+}
 
 .imagem-beneficios {
 	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 8px 8px 10px #000000; /*Adicionando sombra no elemento*/
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
 }
 
 .video {
 	width: 560px;
 	margin: 2em auto; /*1em para cima e para baixo e automática nas laterais*/
+}
+
+/*para adaptar nossa página a varios tipos de tela usamos o media querry, que vamos configurar para melhor layout em cada dispositivo*/
+@media screen and (max-width: 480px) {
+	    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}
 }
